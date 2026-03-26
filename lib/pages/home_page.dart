@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newgen/pages/all_workout.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
@@ -70,11 +71,32 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Gym Routine', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.blue[700],
+        centerTitle: false,
+        backgroundColor: Colors.blue[900],
+        actions: [
+          Row(
+            children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return AllWorkout();
+                      },
+                    ),
+                  );
+                },
+                icon: Icon(Icons.archive, color: Colors.white),
+              ),
+              SizedBox(width: 15),
+            ],
+          ),
+        ],
       ),
       body: Container(
         width: double.infinity,
-        color: Colors.white60,
+        color: Theme.of(context).colorScheme.surface,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
