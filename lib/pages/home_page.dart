@@ -186,10 +186,7 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FittedBox(
-                  child: Text(
-                    'Gym Streak Counter:',
-                    style: TextStyle(fontSize: 20),
-                  ),
+                  child: Text('Gym Day:', style: TextStyle(fontSize: 22)),
                 ),
                 Text(
                   ' $number',
