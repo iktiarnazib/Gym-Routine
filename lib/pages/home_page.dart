@@ -208,7 +208,10 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FittedBox(
-                  child: Text('Gym Day:', style: TextStyle(fontSize: 22)),
+                  child: Text(
+                    'Gym Day Of week:',
+                    style: TextStyle(fontSize: 22),
+                  ),
                 ),
                 Text(
                   ' $number',
@@ -247,3 +250,4 @@ class _HomePageState extends State<HomePage> {
 }
 
 //doable app
+//todo if touch: add clickable links for tutorial, add stream that turns green.
